@@ -55,10 +55,7 @@ class MNIST_cINN(nn.Module):
 
     def forward(self, x, l):
         z = self.cinn(x, c=one_hot(l))
-        (var1, var2) = z
-        print(var1)
-        print(var2)
-        jac = self.cinn.forward(var2)
+        jac = self.cinn.log_jacobian(run_forward=False)
         return z, jac
 
     def reverse_sample(self, z, l):
