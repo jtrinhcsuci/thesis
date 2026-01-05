@@ -9,7 +9,7 @@ from scipy.integrate import solve_ivp
 
 # User inputs
 num_of_patients = 5
-sample_size = 1000
+sample_size = 3000
 mu1 = 10
 sigma1 = 1
 mu2 = 20
